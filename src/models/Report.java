@@ -29,7 +29,7 @@ import javax.persistence.Table;
             name = "getMyAllReports",
             query = "SELECT r FROM Report AS r WHERE r.employee = :employee ORDER BY r.id DESC"
         ),
-        @NamedQuery(
+    @NamedQuery(
             name = "getMyReportsCount",
             query = "SELECT COUNT(r) FROM Report AS r WHERE r.employee = :employee"
         )
@@ -52,6 +52,12 @@ public class Report {
     private String title;
 
     @Lob
+    @Column(name = "start_time", nullable = false)
+    private String start_time;
+
+    @Column(name = "finiish_time", nullable = false)
+    private String finish_time;
+
     @Column(name = "content", nullable = false)
     private String content;
 
@@ -63,6 +69,22 @@ public class Report {
 
     public Integer getId() {
         return id;
+    }
+
+    public String getStart_time() {
+        return start_time;
+    }
+
+    public void setStart_time(String start_time) {
+        this.start_time = start_time;
+    }
+
+    public String getFinish_time() {
+        return finish_time;
+    }
+
+    public void setFinish_time(String finish_time) {
+        this.finish_time = finish_time;
     }
 
     public void setId(Integer id) {
