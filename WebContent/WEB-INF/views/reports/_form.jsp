@@ -15,11 +15,11 @@
 <br /><br />
 
 <label for="start_time">出勤時間</label><br />
-<input type="time" name="start_time" value="${start_time}"/>
+<input type="time" name="start_time" value="${report.start_time}"/>
 <br /><br />
 
 <label for="finish_time">退勤時間</label><br />
-<input type="time" name="finish_time" value="${finish_time}"/>
+<input type="time" name="finish_time" value="${report.finish_time}"/>
 <br /><br />
 
 <label for="name">氏名</label><br />
